@@ -4,18 +4,13 @@
 #include <vector>
 #include "./goods.h"
 
-// Shopping class presents List of shopping.
-// Example:
-//     Shopping tobuylist;
-//     Goods obj1;
-//     Goods obj2;
-//     ...
-//     tobuylist.PushList(obj1);
-//     tobuylist.PushList(obj2);
-//     tobuylist.PrintList();
+namespace MyShopping {
+
 class Shopping{
  public:
-  void PushList(Goods object);
+  Shopping();
+  virtual ~Shopping();
+  void PushList(const Goods& object);
   Goods GetLastElement();
   void PrintList();
   void SortByPrice();
@@ -24,5 +19,7 @@ class Shopping{
  private:
   std::vector<Goods> shopping_list_;
 };
+
+} // end of namespace MyShopping
 
 #endif  // SHOPPING_H_

@@ -1,6 +1,8 @@
 #include <iostream>
 #include "./shopping.h"
 
+using namespace MyShopping;
+
 int main(int argc, char* argv[]) {
   Goods goods1;
   Goods goods2;

@@ -1,13 +1,12 @@
 #ifndef GOODS_H_
 #define GOODS_H_
 
-// Goods class for representing goods information with index and price
-// Example:
-//    Goods test;
-//    test.SetGoodsInfo(1, 10000);
-//    std::cout << test.GetIndex() << " - " << test.GetPrice << endl;
+namespace MyShopping {
+
 class Goods{
  public:
+  Goods() {}
+  virtual ~Goods() {}
   void SetGoodsInfo(int index, int price);
   int GetIndex();
   int GetPrice();
@@ -17,5 +16,6 @@ class Goods{
   int goods_price_ = 0;
 };
 
+} // end of namespace MyShopping
 
 #endif  // GOODS_H_

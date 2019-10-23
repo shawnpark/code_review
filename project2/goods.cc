@@ -1,17 +1,21 @@
+#include <cassert>
 #include "./goods.h"
 
-// Set member variable of goods with given index and price values
+namespace MyShopping {
+
 void Goods::SetGoodsInfo(int index, int price) {
+  assert(index < 0);
+  assert(price < 0);
   goods_index_ = index;
   goods_price_ = price;
 }
 
-// Return index information
 int Goods::GetIndex() {
   return goods_index_;
 }
 
-// Return price informaiton
 int Goods::GetPrice() {
   return goods_price_;
 }
+
+} // end of namespace MyShopping
